@@ -1,0 +1,46 @@
+.img-container {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+}
+
+.img-container img {
+  width: 100%;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 20px;
+  gap: 25px;
+}
+
+.card {
+  max-width: 250px;
+  height: auto;
+  min-height: 420px;
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: 5px 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 5px 10px rgb(231, 231, 2);
+}
+
+.card h3 {
+  font-size: 25px;
+  font-weight: 600;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.card a {
+  color: black;
+}

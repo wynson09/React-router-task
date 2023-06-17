@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background-color: black;
+  height: 80px;
+  z-index: 10;
+}
+
+.header-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 30px 0 20px;
+}
+
+.img-box img {
+  width: 60px;
+}
+
+.nav-box {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-box a {
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.RootLayout {
+  position: relative;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  background-image: url("../img/background.png");
+  background-repeat: repeat;
+  background-size: contain;
+}
+
+/* =================== NAV BAR HOVER EFFECT ==================== */
+
+.nav_style {
+  position: relative;
+}
+.nav_style::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -2px;
+  transition: 0.3s;
+}
+.nav_style:hover::after {
+  width: 100%;
+}
+
+/* ==================== BURGER EFFECT ========================= */
+.burger-menu {
+  border: none;
+  color: white;
+  background-color: transparent;
+  font-size: 35px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.burger-container {
+  display: none;
+  position: relative;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 250px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+  transform: translateX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.slide-menu {
+  transform: translateX(250px);
+}
+.mobile-menu a {
+  color: white;
+  font-size: 25px;
+  margin-left: 15px;
+}
+
+.close-btn {
+  margin-top: 20px;
+  margin-left: 15px;
+}
+/* ===================== MEDIA QUERIES ========================== */
+
+@media (width <= 1050px) {
+  main {
+    height: auto;
+  }
+}
+
+@media (width <= 750px) {
+  .nav-box {
+    display: none;
+  }
+  .burger-container {
+    display: inline-block;
+  }
+}

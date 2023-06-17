@@ -1,0 +1,27 @@
+.transition-container {
+  position: relative;
+}
+
+.effect {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  width: 100vw;
+  height: 100vh;
+}
+
+.effect-1 {
+  z-index: 30;
+  background-color: black;
+}
+
+.effect-2 {
+  z-index: 20;
+  background-color: rgb(235, 235, 2);
+}
+
+.effect-3 {
+  z-index: 15;
+  background-color: white;
+}
